@@ -1,0 +1,47 @@
+Custom Le Mans Timing
+http://github.com/hamilr2/lemans_timing
+
+Copyright (c) 2012 Reilly Hamilton, reillyhamilton@gmail.com
+
+A parser for JSON living timing data supplied by the ACO. Implements several
+additional features, including the ability to highlight changes between timing
+refreshes.
+
+The script polls the ACO for JSON data and stores information on each car at
+each timestamp. Upon first visit to index, a new entry is created in the user
+table, which records the user's IP. Subsequent refreshes of the page compare the
+most recent timestamp to the users' last seen timestamp. Any changes between
+the timestamps are marked with either green/red showing gain/loss, or blue to
+show other changes. If a user wishes to have multiple "sessions", or if
+multiple users on the same IP wish to use the service, custom user names can
+be specified using the url format index.php?u=USERNAME. USERNAME will be used
+in the users table rather than the user's IP.
+
+Initial Setup / Install:
+1. Create a database and import the lemans.sql file to initialize the tables.
+2. Edit include.php to point to have the relevant database information
+
+Use:
+1. Open a browser tab pointing to auto_update.php
+2. Open a second tab pointing to index.php
+3. Either manually refresh or enable auto refresh
+4. Enjoy
+
+Set up for 2013:
+1. Verify that timing link is the same
+2. Update arrays in include.php to have information on teams/cars/drivers/etc
+3. Purge database of 2012 data
+
+License:
+
+Permission to use, copy, modify, and/or distribute this software for any purpose
+with or without fee is hereby granted, provided that the above copyright notice
+and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND
+FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS
+OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER
+TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF
+THIS SOFTWARE.
