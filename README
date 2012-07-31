@@ -28,7 +28,7 @@ Use:
 4. Enjoy
 
 Set up for 2013:
-1. Verify that timing link is the same
+1. Verify that timing link is the same (it probably won't be)
 2. Update arrays in include.php to have information on teams/cars/drivers/etc
 3. Purge database of 2012 data
 
