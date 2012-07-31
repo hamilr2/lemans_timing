@@ -19,7 +19,7 @@ in the users table rather than the user's IP.
 
 Initial Setup / Install:
 1. Create a database and import the lemans.sql file to initialize the tables.
-2. Edit include.php to point to have the relevant database information
+2. Edit include.php to have the relevant database information
 
 Use:
 1. Open a browser tab pointing to auto_update.php
